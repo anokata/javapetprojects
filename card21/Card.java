@@ -14,8 +14,12 @@ class Card {
         this.rank = r;
     }
 
-    enum Suit { diamond, club, heart, spade};
-    enum Rank { two, three, four, five, six, seven, eight, nine, ten, jack, queen, king, ace };
+    Card (Suit s, Rank r) {
+        this(r, s);
+    }
+
+    public enum Suit { diamond, club, heart, spade};
+    public enum Rank { two, three, four, five, six, seven, eight, nine, ten, jack, queen, king, ace };
 
     public String toString() {
         return rank.toString() + " of " + suit.toString();
