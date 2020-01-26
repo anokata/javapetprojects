@@ -3,8 +3,15 @@ class GameLogic {
         GameLogic g = new GameLogic();
     }
 
+    Deck deck;
+    Deck playerHand;
+    Deck dealerHand;
+
     GameLogic () {
-        System.out.println("Created GameLogic");
+        deck = new Deck();
+        playerHand = new Deck();
+        dealerHand = new Deck();
+        deck.initDeck();
     }
 }
 
