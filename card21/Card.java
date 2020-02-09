@@ -1,8 +1,12 @@
+import java.awt.Image;
+
 class Card {
     public static void main(String[] args) {
         Card card = new Card(Rank.seven, Suit.spade);
         System.out.println(card);
     }
+
+    Image image; // TODO
 
     // Масть
     private Suit suit;

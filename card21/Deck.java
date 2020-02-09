@@ -26,6 +26,10 @@ class Deck {
         return cards.pop();
     }
 
+    public void addCard(Card card) {
+        cards.push(card);
+    }
+
     Deck () {
     }
 }

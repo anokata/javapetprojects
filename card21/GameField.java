@@ -38,9 +38,15 @@ class GameField extends JPanel {
 
         Image image;
         image = Toolkit.getDefaultToolkit().getImage("cards/CA.png");
-        image = makeColorTransparent(image, Color.BLACK);
+        //image = makeColorTransparent(image, Color.BLACK);
 
         g2d.drawImage(image, 0, 0, this);
+
+        // draw player cards
+        for (Card card : gameLogic.playerHand.cards) {
+        }
+
+        // draw dealer hand backs
     }
 
     public static BufferedImage toBufferedImage(Image img) {
