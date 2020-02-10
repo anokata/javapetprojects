@@ -16,6 +16,9 @@ class GameLogic {
         playerHand = new Deck();
         dealerHand = new Deck();
         deck.initDeck();
+
+        // test
+        playerHand.addCard(new Card(Card.Suit.club, Card.Rank.seven));
     }
 
     public void giveHand() {

@@ -25,10 +25,10 @@ class GameField extends JPanel {
         Graphics2D g2d = (Graphics2D)g;
         Color textColor = new Color(0,0,0);
         // draw deck
-        g.setColor(new Color(200, 200, 200));
-        g.fillRoundRect(deckX, deckY, deckWidth, deckHeigh, 20, 20);
-        g.setColor(new Color(150, 0, 0));
-        g.fillRoundRect(deckX+borderWidth/2, deckY+borderWidth/2, deckWidth-borderWidth, deckHeigh-borderWidth, 20, 20);
+        // g.setColor(new Color(200, 200, 200));
+        // g.fillRoundRect(deckX, deckY, deckWidth, deckHeigh, 20, 20);
+        // g.setColor(new Color(150, 0, 0));
+        // g.fillRoundRect(deckX+borderWidth/2, deckY+borderWidth/2, deckWidth-borderWidth, deckHeigh-borderWidth, 20, 20);
 
         // draw card (text)
         Font f = new Font("DejaVu Mono", Font.BOLD, 12);
@@ -37,13 +37,19 @@ class GameField extends JPanel {
         g2d.drawString("A", 100, 0);
 
         Image image;
-        image = Toolkit.getDefaultToolkit().getImage("cards/CA.png");
+        //image = Toolkit.getDefaultToolkit().getImage("cards/CA.png");
         //image = makeColorTransparent(image, Color.BLACK);
 
-        g2d.drawImage(image, 0, 0, this);
+        //g2d.drawImage(image, 0, 0, this);
+        g2d.drawImage(gameLogic.deck.cards.get(0).getImage(), 0, 0, this);
 
+        int handX = 10;
+        int handY = 200;
         // draw player cards
         for (Card card : gameLogic.playerHand.cards) {
+            g2d.drawImage(card.getImage(), handX, handY, this);
+            //System.out.println(card);
+            //handX += 
         }
 
         // draw dealer hand backs
