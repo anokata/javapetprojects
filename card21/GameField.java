@@ -41,7 +41,7 @@ class GameField extends JPanel {
         //image = makeColorTransparent(image, Color.BLACK);
 
         //g2d.drawImage(image, 0, 0, this);
-        g2d.drawImage(gameLogic.deck.cards.get(0).getImage(), 0, 0, this);
+        //g2d.drawImage(gameLogic.deck.cards.get(0).getImage(), 0, 0, this);
 
         int handX = 10;
         int handY = 200;
@@ -49,10 +49,16 @@ class GameField extends JPanel {
         for (Card card : gameLogic.playerHand.cards) {
             g2d.drawImage(card.getImage(), handX, handY, this);
             //System.out.println(card);
-            //handX += 
+            handX += 50;
         }
 
         // draw dealer hand backs
+        handY = 20;
+        for (Card card : gameLogic.dealerHand.cards) {
+            g2d.drawImage(card.getImage(), handX, handY, this);
+            //System.out.println(card);
+            handX += 50;
+        }
     }
 
     public static BufferedImage toBufferedImage(Image img) {

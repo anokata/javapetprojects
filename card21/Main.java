@@ -26,6 +26,7 @@ class Main {
         frame.setVisible(true);
 
         gameLogic.giveHand();
+        System.out.println(gameLogic.dealerHand.cards.get(0));
     }
 }
 
